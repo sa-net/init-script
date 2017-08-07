@@ -1,0 +1,116 @@
+#User root
+ControlMaster auto
+SendEnv LC_POWERLINE_FONT
+Host ah0
+    HostName cn-ah-0.server.biopano.org
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host bj0
+    HostName cn-bj-0.server.biopano.org
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host do0
+    HostName sg-do-0.server.biopano.org
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host ce0
+    HostName us-ce-0.server.biopano.org
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host pi0
+    HostName 114.214.163.44
+    User pi
+    Port 201
+    IdentityFile ~/.ssh/id_rsa
+Host pi1
+    HostName 114.214.163.44
+    User pi
+    Port 202
+    IdentityFile ~/.ssh/id_rsa
+Host mail
+    HostName mail.yfgao.com
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host mirrors
+    HostName mirrors.ustc.edu.cn
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host blog
+    HostName blog.ustc.edu.cn
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host lug
+    HostName lug.ustc.edu.cn
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host gitlug
+    HostName git.ustclug.org
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host git
+    HostName git.gaoyifan.com
+    User root
+    Port 30588
+    IdentityFile ~/.ssh/id_rsa
+Host 1415
+    HostName wsn1415.gaof.net
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host linode
+    HostName 104.237.135.230
+    User yifan
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+Host rtros
+    HostName 100.65.0.51
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    #ProxyCommand ssh sshproxy@wsn1415.gaof.net "nc %h %p"
+Host ros
+    HostName 100.65.0.52
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    #ProxyCommand ssh sshproxy@wsn1415.gaof.net "nc %h %p"
+Host 192.168.79.*
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    ProxyCommand ssh sshproxy@wsn1415.gaof.net "nc %h %p"
+Host xenomai
+    HostName 100.65.0.53
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    #ProxyCommand ssh sshproxy@wsn1415.gaof.net "nc %h %p"
+Host rtai
+    HostName 100.65.0.54
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    #ProxyCommand ssh sshproxy@wsn1415.gaof.net "nc %h %p"
+Host *.wsn1415.gaof.net
+    User root
+    IdentityFile ~/.ssh/id_rsa
+Host *.gaof.net
+    User yifan
+    IdentityFile ~/.ssh/id_rsa
+Host *.lug.ustc.edu.cn
+    User yifan
+    IdentityFile ~/.ssh/id_rsa
+Host *
+    CanonicalizeHostname Yes
+    CanonicalDomains wsn1415.gaof.net gaof.net yfgao.com ustclug.org lug.ustc.edu.cn
+    CanonicalizeMaxDots 0
+    CanonicalizeFallbackLocal yes
